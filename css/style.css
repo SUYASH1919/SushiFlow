@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #081321;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 22px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.brand {
+    color: #42caff;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.date {
+    color: #91a7bd;
+    font-size: 12px;
+}
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    font-size: 30px;
+    margin-bottom: 9px;
+}
+
+.welcome p,
+.goal {
+    color: #91a7bd;
+    font-size: 14px;
+}
+
+.water-card {
+    background: #11243a;
+    border: 1px solid #203b55;
+    border-radius: 24px;
+    padding: 28px 20px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.water-sphere {
+    width: 210px;
+    height: 210px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    border: 3px solid #65d8ff;
+    background: linear-gradient(145deg, #193a58, #081b31);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 35px #168dcc44,
+                inset -12px -12px 25px #00000066,
+                inset 10px 10px 20px #ffffff18;
+}
+
+.water-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(180deg, #43d4ff, #0877c9);
+    transition: height 1s ease;
+    opacity: 0.9;
+}
+
+.water-fill::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 30px;
+    top: -15px;
+    left: -50%;
+    border-radius: 40%;
+    background: #78e4ff;
+    animation: wave 4s linear infinite;
+}
+
+@keyframes wave {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.sphere-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    text-shadow: 0 2px 8px #00345c;
+}
+
+.sphere-content h2 {
+    font-size: 38px;
+}
+
+.sphere-content p {
+    font-size: 17px;
+    margin: 5px;
+}
+
+.sphere-content small {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.water-card > h2 {
+    margin-bottom: 8px;
+}
+
+.water-card > p {
+    color: #91a7bd;
+    margin: 10px 0;
+}
+
+.progress-track {
+    height: 9px;
+    background: #263b50;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #43caff;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+.actions {
+    margin-bottom: 30px;
+}
+
+.actions h2,
+.history h2 {
+    margin-bottom: 18px;
+}
+
+.water-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    background: #123c5a;
+    color: #5ed5ff;
+    padding: 14px 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.custom-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    background: #11243a;
+    border: 1px solid #29435c;
+    color: white;
+    padding: 13px;
+    border-radius: 10px;
+}
+
+.custom-input button {
+    flex: 0 0 75px;
+}
+
+.history {
+    background: #11243a;
+    padding: 20px;
+    border-radius: 18px;
+}
+
+#historyList {
+    color: #91a7bd;
+    font-size: 14px;
+}
+
+.history-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #29435c;
+}
+
+footer {
+    text-align: center;
+    color: #637b94;
+    font-size: 11px;
+    margin-top: 35px;
+}

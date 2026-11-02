@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080f1c">
+  <title>SushiFlow</title>
+  <script type="module" crossorigin src="/assets/index-B_V55BoA.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-B1uoJXWS.css">
+</head>
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <div>
+        <div class="brand">SushiFlow<span>.</span></div>
+        <div class="tagline">Hydrate. Track. Improve.</div>
+      </div>
+      <button id="settings-button" class="icon-button" aria-label="Settings">⚙</button>
+    </header>
+
+    <main id="home-screen">
+      <section class="welcome">
+        <div id="current-date" class="date-label"></div>
+        <h1>Stay hydrated.</h1>
+        <p>Your daily hydration overview.</p>
+      </section>
+
+      <section class="water-card">
+        <div id="sphere"></div>
+        <div class="water-info">
+          <div id="percentage" class="percentage">0%</div>
+          <div class="muted">Daily progress</div>
+          <div class="amount-line">
+            <strong id="consumed">0 ml</strong>
+            <span> consumed</span>
+          </div>
+          <div class="progress-track">
+            <div id="progress" class="progress-fill"></div>
+          </div>
+          <div class="remaining-line">
+            <span id="remaining">2500 ml</span> remaining
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Quick add</h2>
+          <span class="muted">Choose an amount</span>
+        </div>
+        <div class="quick-grid">
+          <button class="quick-button" data-amount="150">+150 <small>ml</small></button>
+          <button class="quick-button" data-amount="250">+250 <small>ml</small></button>
+          <button class="quick-button" data-amount="500">+500 <small>ml</small></button>
+        </div>
+      </section>
+
+      <section class="section today-section">
+        <div class="section-heading">
+          <h2>Today's activity</h2>
+          <span id="entry-count" class="muted">0 entries</span>
+        </div>
+        <div id="history-list" class="history-list">
+          <p class="empty-history">No water intake recorded today.</p>
+        </div>
+      </section>
+
+      <footer>Designed & developed by <strong>SS1919</strong></footer>
+    </main>
+
+    <main id="settings-screen" class="hidden">
+      <div class="settings-heading">
+        <button id="back-button" class="back-button">←</button>
+        <div>
+          <h1>Settings</h1>
+          <p>Manage your daily hydration.</p>
+        </div>
+      </div>
+
+      <section class="settings-card">
+        <h2>Daily water limit</h2>
+        <p class="muted">Set your daily hydration target.</p>
+        <div class="goal-control">
+          <input id="goal-input" type="number" min="250" max="10000" step="50" placeholder="2500">
+          <span>ml / day</span>
+        </div>
+        <button id="save-goal" class="primary-button">Save daily limit</button>
+      </section>
+
+      <section class="settings-card">
+        <h2>Custom water adjustment</h2>
+        <p class="muted">Add or reduce a specific amount.</p>
+        <div class="custom-control">
+          <input id="custom-amount" type="number" min="1" max="10000" placeholder="Enter amount in ml">
+          <div class="adjust-buttons">
+            <button id="custom-add" class="primary-button">＋ Add water</button>
+            <button id="custom-reduce" class="secondary-button">− Reduce water</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-card danger-card">
+        <h2>Reset today's data</h2>
+        <p class="muted">Deletes only today's intake entries. Your daily limit and previous dates remain unchanged.</p>
+        <button id="reset-today" class="danger-button">Reset today</button>
+      </section>
+
+      <section class="settings-card">
+        <h2>About SushiFlow</h2>
+        <p class="muted">Hydrate. Track. Improve.</p>
+        <p class="about-credit">Designed & developed by SS1919</p>
+        <p class="version">SushiFlow · Offline-first</p>
+      </section>
+    </main>
+
+  </div>
+
+</body>
+</html>

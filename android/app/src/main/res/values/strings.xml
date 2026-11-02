@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SushiFlow</string>
+    <string name="title_activity_main">SushiFlow</string>
+    <string name="package_name">com.ss1919.sushiflow</string>
+    <string name="custom_url_scheme">com.ss1919.sushiflow</string>
+</resources>
